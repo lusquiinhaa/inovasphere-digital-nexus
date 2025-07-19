@@ -1,86 +1,118 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Rocket } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-20 pb-16 bg-gradient-hero min-h-screen flex items-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="pt-20 pb-16 min-h-screen flex items-center relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-200/30 to-pink-200/30 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-gradient-to-r from-green-200/30 to-blue-200/30 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2 text-growth-green-600">
-                <Sparkles size={20} />
-                <span className="text-sm font-semibold uppercase tracking-wide">
-                  Transformação Digital
-                </span>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 px-4 py-2 rounded-full">
+                  <Zap size={16} className="text-purple-600 animate-pulse" />
+                  <span className="text-sm font-bold text-purple-700 uppercase tracking-wide">
+                    Revolução Digital em Curso
+                  </span>
+                </div>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-montserrat leading-tight">
-                Do Código à Estratégia:{' '}
-                <span className="text-gradient">
-                  Sua Jornada Digital
-                </span>{' '}
-                Começa Aqui!
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-montserrat leading-tight">
+                Não Criamos Sites.{' '}
+                <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">
+                  Construímos Impérios Digitais.
+                </span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                Sites, Aplicativos e Mentorias Sob Medida para Alavancar seu Negócio.
+              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
+                Cada linha de código é estrategicamente pensada para <strong>dominar seu mercado</strong>. 
+                Sua concorrência ainda está fazendo "sites bonitos". Nós estamos criando <em>máquinas de vendas</em>.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-tech text-white hover:opacity-90 transition-all duration-200 transform hover:scale-105"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 text-lg px-8 py-4"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Fale com um Especialista
-                <ArrowRight className="ml-2" size={20} />
+                Dominar Meu Mercado
+                <Rocket className="ml-2" size={20} />
               </Button>
               
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-tech-blue-500 text-tech-blue-600 hover:bg-tech-blue-50"
-                onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300 text-lg px-8 py-4"
+                onClick={() => document.getElementById('demos')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Conhecer Serviços
+                Ver Projetos Épicos
+                <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-col sm:flex-row gap-8 pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-3xl font-bold text-tech-blue-700">10+</div>
-                <div className="text-gray-600">Anos de Experiência</div>
+            {/* Enhanced Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">€10M+</div>
+                <div className="text-gray-600 text-sm">Faturamento Gerado</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-growth-green-600">30%</div>
-                <div className="text-gray-600">Mais Rápido</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">847%</div>
+                <div className="text-gray-600 text-sm">ROI Médio</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-tech-blue-700">100+</div>
-                <div className="text-gray-600">Projetos Entregues</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">0.3s</div>
+                <div className="text-gray-600 text-sm">Velocidade Média</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">24/7</div>
+                <div className="text-gray-600 text-sm">Suporte Premium</div>
               </div>
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Enhanced Hero Visual */}
           <div className="relative animate-fade-in">
             <div className="relative z-10">
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Ecossistema Digital - Dispositivos conectados e desenvolvimento"
-                className="rounded-2xl shadow-2xl w-full animate-float"
-              />
+              {/* Main Device Mockup */}
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Interface revolucionária - Dashboard analytics com IA"
+                  className="rounded-3xl shadow-2xl w-full animate-float transform hover:scale-105 transition-transform duration-500"
+                />
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-6 -right-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl p-4 shadow-xl animate-float" style={{animationDelay: '1s'}}>
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl p-3 shadow-xl animate-float" style={{animationDelay: '2s'}}>
+                  <div className="text-white text-sm font-bold">+340% ROI</div>
+                </div>
+                
+                <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-xl animate-float" style={{animationDelay: '0.5s'}}>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-600">4.9★</div>
+                    <div className="text-xs text-gray-500">Rating</div>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-growth-green-500 rounded-full opacity-20 animate-float" style={{animationDelay: '1s'}}></div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-tech-blue-500 rounded-full opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-tech rounded-full opacity-30 animate-float" style={{animationDelay: '0.5s'}}></div>
+            {/* Background Effects */}
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-r from-blue-400/20 to-green-400/20 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
           </div>
         </div>
       </div>
