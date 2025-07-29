@@ -6,19 +6,25 @@ import DemoSection from '@/components/DemoSection';
 import DifferentialsSection from '@/components/DifferentialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSection />
-      <ServicesSection />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <div id="servicos">
+        <ServicesSection />
+      </div>
       <div id="demos">
         <DemoSection />
       </div>
       <DifferentialsSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

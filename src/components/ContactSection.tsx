@@ -4,8 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Send, MessageCircle } from 'lucide-react';
+import { Send, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { submitContactForm } from '@/lib/supabase';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const ContactSection = () => {
     telefone: '',
     mensagem: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,24 +26,38 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Simulação de envio do formulário
-    console.log('Dados do formulário:', formData);
-    
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve para seu diagnóstico gratuito.",
-    });
+    try {
+      const result = await submitContactForm(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Entraremos em contato em breve para seu diagnóstico gratuito.",
+        });
 
-    // Reset form
-    setFormData({
-      nome: '',
-      email: '',
-      telefone: '',
-      mensagem: ''
-    });
+        // Reset form
+        setFormData({
+          nome: '',
+          email: '',
+          telefone: '',
+          mensagem: ''
+        });
+      } else {
+        throw new Error('Erro ao enviar mensagem');
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Por favor, tente novamente ou entre em contato via WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -130,10 +146,20 @@ const ContactSection = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-gradient-tech text-white hover:opacity-90 transition-opacity duration-200 text-lg font-semibold"
+                  disabled={isSubmitting}
+                  className="w-full h-12 bg-gradient-tech text-white hover:opacity-90 transition-all duration-200 text-lg font-semibold disabled:opacity-50"
                 >
-                  <Send className="mr-2" size={20} />
-                  Quero Inovar
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2" size={20} />
+                      Quero Inovar
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>
@@ -153,21 +179,29 @@ const ContactSection = () => {
 
             {/* Contact Methods */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl">
+              <a 
+                href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da InovaSphere Solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
                 <MessageCircle className="w-6 h-6 text-growth-green-600" />
                 <div>
                   <div className="font-semibold text-gray-900">WhatsApp</div>
                   <div className="text-gray-600">(11) 99999-9999</div>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl">
+              <a 
+                href="mailto:contato@inovasphere.com?subject=Interesse nos serviços da InovaSphere"
+                className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
                 <Send className="w-6 h-6 text-tech-blue-600" />
                 <div>
                   <div className="font-semibold text-gray-900">E-mail</div>
                   <div className="text-gray-600">contato@inovasphere.com</div>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* Benefits */}
