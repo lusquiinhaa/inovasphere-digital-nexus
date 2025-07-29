@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <div className="text-gray-600 text-sm">ROI Médio</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">0.3s</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">0.5s</div>
                 <div className="text-gray-600 text-sm">Velocidade Média</div>
               </div>
               <div className="text-center">
