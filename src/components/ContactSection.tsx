@@ -180,7 +180,7 @@ const ContactSection = () => {
             {/* Contact Methods */}
             <div className="space-y-4">
               <a 
-                href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da InovaSphere Solutions"
+                href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da AllSolutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
@@ -193,13 +193,13 @@ const ContactSection = () => {
               </a>
 
               <a 
-                href="mailto:contato@inovasphere.com?subject=Interesse nos serviços da InovaSphere"
+                href="mailto:contato@allsolutions.com?subject=Interesse nos serviços da AllSolutions"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 <Send className="w-6 h-6 text-tech-blue-600" />
                 <div>
                   <div className="font-semibold text-gray-900">E-mail</div>
-                  <div className="text-gray-600">contato@inovasphere.com</div>
+                  <div className="text-gray-600">contato@allsolutions.com</div>
                 </div>
               </a>
             </div>

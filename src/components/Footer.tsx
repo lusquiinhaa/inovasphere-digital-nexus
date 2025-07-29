@@ -10,10 +10,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">I</span>
+                <span className="text-white font-bold text-xl">A</span>
               </div>
               <span className="font-montserrat font-bold text-xl">
-                InovaSphere Solutions
+                AllSolutions
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-growth-green-500" />
-                <span className="text-gray-400">contato@inovasphere.com</span>
+                <span className="text-gray-400">contato@allsolutions.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4 text-growth-green-500" />
@@ -65,7 +65,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 InovaSphere Solutions. Todos os direitos reservados.
+            © 2025 AllSolutions. Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -45,8 +45,8 @@ const Header = () => {
               <Sparkles className="text-white w-6 h-6" />
             </div>
             <div>
-              <span className="font-montserrat font-bold text-xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                InovaSphere
+            <span className="font-montserrat font-bold text-xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                AllSolutions
               </span>
               <div className="text-xs text-gray-500 font-medium">DIGITAL EMPIRE BUILDERS</div>
             </div>
