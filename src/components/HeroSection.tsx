@@ -29,7 +29,7 @@ const HeroSection = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-montserrat leading-tight">
                 Não Criamos Sites.{' '}
                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">
-                  Construímos Impérios Digitais.
+                  Construímos impérios digitais sob medida para o seu negócio.
                 </span>
               </h1>
               
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300 text-lg px-8 py-4"
                 onClick={() => document.getElementById('demos')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Ver Projetos Épicos
+                Ver Projetos
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
@@ -63,7 +63,7 @@ const HeroSection = () => {
             {/* Enhanced Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">€10M+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">1M+</div>
                 <div className="text-gray-600 text-sm">Faturamento Gerado</div>
               </div>
               <div className="text-center">
