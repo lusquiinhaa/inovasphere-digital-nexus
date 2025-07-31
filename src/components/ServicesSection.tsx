@@ -7,14 +7,14 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Monitor,
-      title: 'Websites que Convertem',
-      subtitle: 'Não apenas bonitos. Lucrativos.',
-      description: 'Arquiteturas de conversão que transformam visitantes em clientes fanáticos. Cada pixel é estrategicamente posicionado para maximizar seus resultados.',
+      title: 'Sites & Apps Web',
+      subtitle: 'Plataformas que dominam mercados.',
+      description: 'Sites responsivos e aplicações web PWA que transformam visitantes em clientes fanáticos. Cada pixel é estrategicamente posicionado para conversões máximas.',
       features: [
-        'Conversão otimizada por IA',
-        'Performance sub-1 segundo',
+        'Websites responsivos',
+        'Progressive Web Apps',
         'SEO que domina Google',
-        'Analytics preditivos'
+        'Performance sub-1 segundo'
       ],
       color: 'from-blue-600 to-purple-600',
       bgColor: 'from-blue-50 to-purple-50',
@@ -22,14 +22,14 @@ const ServicesSection = () => {
     },
     {
       icon: Smartphone,
-      title: 'Apps que Viciam',
-      subtitle: 'UX que seus usuários não conseguem largar.',
-      description: 'Aplicativos móveis com psicologia comportamental integrada. Criamos experiências que geram dependência positiva e engajamento extremo.',
+      title: 'Apps Mobile & Desktop',
+      subtitle: 'Soluções multiplataforma que conquistam.',
+      description: 'Apps Android/iOS nativos e software Windows personalizados. Experiências premium que geram engajamento extremo e fidelização total dos usuários.',
       features: [
-        'UX Psychology-driven',
-        'Performance nativa',
-        'Offline-first',
-        'Push notifications inteligentes'
+        'Android/iOS nativo',
+        'Software Windows',
+        'Apps cross-platform',
+        'Interface intuitiva premium'
       ],
       color: 'from-green-600 to-blue-600',
       bgColor: 'from-green-50 to-blue-50',
@@ -37,14 +37,14 @@ const ServicesSection = () => {
     },
     {
       icon: Rocket,
-      title: 'Mentoria de Élite',
-      subtitle: 'Do zero ao unicórnio.',
-      description: 'Consultoria estratégica 1:1 que já escalou +200 negócios. Metodologia proprietária que comprime anos de aprendizado em meses de resultados.',
+      title: 'Mentoria & Consultoria',
+      subtitle: 'Estratégias que multiplicam resultados.',
+      description: 'Consultoria estratégica e mentoria executiva 1:1 que já escalou +200 negócios. Metodologia proprietária que acelera crescimento e maximiza ROI.',
       features: [
-        'Estratégia personalizada',
-        'Acesso direto aos fundadores',
-        'Network exclusivo',
-        'ROI garantido'
+        'Consultoria técnica especializada',
+        'Mentoria executiva 1:1',
+        'Estratégia digital personalizada',
+        'Roadmap de crescimento'
       ],
       color: 'from-purple-600 to-pink-600',
       bgColor: 'from-purple-50 to-pink-50',
@@ -70,7 +70,7 @@ const ServicesSection = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Enquanto outros entregam "produtos", nós construímos <strong>máquinas de crescimento</strong> que trabalham 24/7 para dominar seu mercado.
+            <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Enquanto outros entregam "produtos isolados", nós construímos <strong>ecossistemas completos</strong> que trabalham 24/7 para dominar seu mercado.
           </p>
         </div>
 

@@ -27,15 +27,15 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-montserrat leading-tight">
-                Não Criamos Sites.{' '}
+                Não Criamos Apenas Sites.{' '}
                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">
-                  Construímos impérios digitais sob medida para o seu negócio.
+                  Construímos Ecossistemas Digitais Completos.
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
-                Cada linha de código é estrategicamente pensada para <strong>dominar seu mercado</strong>. 
-                Sua concorrência ainda está fazendo "sites bonitos". Nós estamos criando <em>máquinas de vendas</em>.
+                <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Cada solução é estrategicamente desenvolvida para <strong>dominar seu mercado</strong>. 
+                Sua concorrência ainda está oferecendo "produtos isolados". Nós criamos <em>ecossistemas que multiplicam resultados</em>.
               </p>
             </div>
 
