@@ -34,8 +34,8 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
-                <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Cada solução é estrategicamente desenvolvida para <strong>dominar seu mercado</strong>. 
-                Sua concorrência ainda está oferecendo "produtos isolados". Nós criamos <em>ecossistemas que multiplicam resultados</em>.
+                <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Desenvolvemos soluções sob medida que <strong>impulsionam seu crescimento</strong>. 
+                Enquanto outros entregam projetos, nós construímos <em>partnerships de longo prazo</em>.
               </p>
             </div>
 
@@ -63,20 +63,20 @@ const HeroSection = () => {
             {/* Enhanced Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">1M+</div>
-                <div className="text-gray-600 text-sm">Faturamento Gerado</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">100%</div>
+                <div className="text-gray-600 text-sm">Satisfação Cliente</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">847%</div>
-                <div className="text-gray-600 text-sm">ROI Médio</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">5★</div>
+                <div className="text-gray-600 text-sm">Avaliação Média</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">0.5s</div>
-                <div className="text-gray-600 text-sm">Velocidade Média</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">2x</div>
+                <div className="text-gray-600 text-sm">Crescimento Médio</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">24/7</div>
-                <div className="text-gray-600 text-sm">Suporte Premium</div>
+                <div className="text-gray-600 text-sm">Suporte Dedicado</div>
               </div>
             </div>
           </div>
@@ -98,12 +98,12 @@ const HeroSection = () => {
                 </div>
                 
                 <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl p-3 shadow-xl animate-float" style={{animationDelay: '2s'}}>
-                  <div className="text-white text-sm font-bold">+340% ROI</div>
+                  <div className="text-white text-sm font-bold">100% Sucesso</div>
                 </div>
                 
                 <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-xl animate-float" style={{animationDelay: '0.5s'}}>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">4.9★</div>
+                    <div className="text-lg font-bold text-purple-600">5.0★</div>
                     <div className="text-xs text-gray-500">Rating</div>
                   </div>
                 </div>

@@ -18,7 +18,7 @@ const ServicesSection = () => {
       ],
       color: 'from-blue-600 to-purple-600',
       bgColor: 'from-blue-50 to-purple-50',
-      results: '+340% conversões em média'
+      results: 'Performance otimizada'
     },
     {
       icon: Smartphone,
@@ -33,7 +33,7 @@ const ServicesSection = () => {
       ],
       color: 'from-green-600 to-blue-600',
       bgColor: 'from-green-50 to-blue-50',
-      results: '4.9★ rating médio'
+      results: 'Experiência premium'
     },
     {
       icon: Rocket,
@@ -48,7 +48,7 @@ const ServicesSection = () => {
       ],
       color: 'from-purple-600 to-pink-600',
       bgColor: 'from-purple-50 to-pink-50',
-      results: '€2.3M faturamento médio'
+      results: 'Crescimento acelerado'
     }
   ];
 
@@ -66,11 +66,11 @@ const ServicesSection = () => {
           
           <h2 className="text-5xl md:text-6xl font-bold font-montserrat text-gray-900 leading-tight">
             Não Fazemos <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Projetos</span>.
-            <br />Criamos <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Revoluções</span>.
+            <br />Criamos <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Soluções</span>.
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Enquanto outros entregam "produtos isolados", nós construímos <strong>ecossistemas completos</strong> que trabalham 24/7 para dominar seu mercado.
+            <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Desenvolvemos soluções completas e personalizadas que <strong>fazem a diferença real</strong> no seu negócio.
           </p>
         </div>
 
@@ -145,15 +145,15 @@ const ServicesSection = () => {
                 Pronto para Revolucionar seu Negócio?
               </h3>
               <p className="text-purple-100 mb-6 text-lg">
-                Cada dia que você espera, sua concorrência está ganhando terreno. 
-                <strong> O momento é agora.</strong>
+                Vamos trabalhar juntos para transformar sua visão em realidade digital. 
+                <strong>Seu sucesso é nossa prioridade.</strong>
               </p>
               <Button 
                 size="lg" 
                 className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Começar Minha Revolução
+                Iniciar Meu Projeto
                 <Rocket className="ml-2 w-5 h-5" />
               </Button>
             </CardContent>

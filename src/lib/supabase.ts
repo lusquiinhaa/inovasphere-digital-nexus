@@ -1,9 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
-
-const supabaseUrl = 'https://your-project.supabase.co'
-const supabaseKey = 'your-anon-key'
-
-export const supabase = createClient(supabaseUrl, supabaseKey)
+// Simulação de backend para demonstração
+// Para produção, configure as credenciais do Supabase
 
 export type ContactForm = {
   id?: string
@@ -16,16 +12,24 @@ export type ContactForm = {
 
 export const submitContactForm = async (formData: Omit<ContactForm, 'id' | 'created_at'>) => {
   try {
-    const { data, error } = await supabase
-      .from('contacts')
-      .insert([formData])
-      .select()
-
-    if (error) {
-      throw error
+    // Simulação de envio - em produção, use Supabase configurado
+    const contactData = {
+      ...formData,
+      id: Date.now().toString(),
+      created_at: new Date().toISOString()
     }
-
-    return { success: true, data }
+    
+    // Salva localmente para demonstração
+    const existingContacts = JSON.parse(localStorage.getItem('contacts') || '[]')
+    existingContacts.push(contactData)
+    localStorage.setItem('contacts', JSON.stringify(existingContacts))
+    
+    // Simula delay de rede
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    console.log('Contato recebido:', contactData)
+    
+    return { success: true, data: contactData }
   } catch (error) {
     console.error('Erro ao enviar formulário:', error)
     return { success: false, error }
