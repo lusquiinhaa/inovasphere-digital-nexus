@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import projects from "@/data/projetos.json";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Projeto {
   slug: string;
@@ -132,13 +133,11 @@ const Projetos = () => {
                       </a>
                     </Button>
                   )}
-                  {p.links.case && (
-                    <Button variant="outline" asChild>
-                      <a href={p.links.case}>
-                        Ver estudo de caso <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
-                  )}
+                  <Button variant="outline" asChild>
+                    <Link to={`/projetos/${p.slug}`}>
+                      Ver estudo de caso <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
