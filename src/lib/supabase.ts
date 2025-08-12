@@ -6,6 +6,9 @@ export type ContactForm = {
   nome: string
   email: string
   telefone: string
+  empresa?: string
+  objetivos?: string[]
+  orcamento?: string
   mensagem: string
   created_at?: string
 }

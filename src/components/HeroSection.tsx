@@ -1,8 +1,10 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Zap, Rocket } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="home" className="pt-20 pb-16 min-h-screen flex items-center relative overflow-hidden">
       {/* Animated Background */}
@@ -27,15 +29,14 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-montserrat leading-tight">
-                Não Criamos Apenas Sites.{' '}
+                Não criamos sites —{' '}
                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">
-                  Construímos Ecossistemas Digitais Completos.
+                  construímos impérios digitais.
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
-                <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Desenvolvemos soluções sob medida que <strong>impulsionam seu crescimento</strong>. 
-                Enquanto outros entregam projetos, nós construímos <em>partnerships de longo prazo</em>.
+                Da estratégia ao código: sites, apps e automações que geram resultado real.
               </p>
             </div>
 
@@ -45,7 +46,7 @@ const HeroSection = () => {
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 text-lg px-8 py-4"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Dominar Meu Mercado
+                Solicitar orçamento
                 <Rocket className="ml-2" size={20} />
               </Button>
               
@@ -53,32 +54,13 @@ const HeroSection = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300 text-lg px-8 py-4"
-                onClick={() => document.getElementById('demos')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/projetos')}
               >
-                Ver Projetos
+                Ver projetos
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
 
-            {/* Enhanced Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">100%</div>
-                <div className="text-gray-600 text-sm">Satisfação Cliente</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">5★</div>
-                <div className="text-gray-600 text-sm">Avaliação Média</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">2x</div>
-                <div className="text-gray-600 text-sm">Crescimento Médio</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">24/7</div>
-                <div className="text-gray-600 text-sm">Suporte Dedicado</div>
-              </div>
-            </div>
           </div>
 
           {/* Enhanced Hero Visual */}

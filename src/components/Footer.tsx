@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-growth-green-500" />
-                <span className="text-gray-400">contato@allsolutions.com</span>
+                <span className="text-gray-400">allsolutions2025@outlook.com.br</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4 text-growth-green-500" />

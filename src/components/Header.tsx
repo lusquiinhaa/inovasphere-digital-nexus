@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,6 +65,14 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
+            <Link to="/projetos" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+              Projetos
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link to="/contato" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+              Contato
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -101,6 +110,20 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
+              <Link 
+                to="/projetos" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+              >
+                Projetos
+              </Link>
+              <Link 
+                to="/contato" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+              >
+                Contato
+              </Link>
               <Button 
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white mt-4"
                 onClick={() => {

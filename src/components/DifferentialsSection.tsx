@@ -11,12 +11,12 @@ const DifferentialsSection = () => {
     {
       icon: Users,
       title: 'Time Especializado',
-      description: '10+ anos de experiência em tech e negócios.'
+      description: 'Experiência sólida em tecnologia e negócios.'
     },
     {
       icon: Zap,
       title: 'Agilidade',
-      description: 'Entrega 30% mais rápida que o mercado.'
+      description: 'Entrega ágil com foco em qualidade e parceria.'
     }
   ];
 
@@ -67,17 +67,17 @@ const DifferentialsSection = () => {
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold font-montserrat text-gray-900 mb-4">
-              Resultados Comprovados
+              Resultados que importam
             </h3>
             <p className="text-gray-600 mb-6">
-              <strong>E-commerce +70% em conversões</strong> - Um dos nossos casos de sucesso que transformou completamente a performance digital de um cliente.
+              Cada projeto foca em resolver problemas reais do negócio com tecnologia na medida certa.
             </p>
             <div className="flex justify-center">
               <button 
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-tech text-white px-8 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity duration-200"
               >
-                Ver Mais Cases
+                Falar com a AllSolutions
               </button>
             </div>
           </div>

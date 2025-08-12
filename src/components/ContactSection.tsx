@@ -13,6 +13,9 @@ const ContactSection = () => {
     nome: '',
     email: '',
     telefone: '',
+    empresa: '',
+    objetivos: [] as string[],
+    orcamento: '',
     mensagem: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,6 +47,9 @@ const ContactSection = () => {
           nome: '',
           email: '',
           telefone: '',
+          empresa: '',
+          objetivos: [],
+          orcamento: '',
           mensagem: ''
         });
       } else {
@@ -193,13 +199,13 @@ const ContactSection = () => {
               </a>
 
               <a 
-                href="mailto:contato@allsolutions.com?subject=Interesse nos serviços da AllSolutions"
+                href="mailto:allsolutions2025@outlook.com.br?subject=Interesse nos serviços da AllSolutions"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 <Send className="w-6 h-6 text-tech-blue-600" />
                 <div>
                   <div className="font-semibold text-gray-900">E-mail</div>
-                  <div className="text-gray-600">contato@allsolutions.com</div>
+                  <div className="text-gray-600">allsolutions2025@outlook.com.br</div>
                 </div>
               </a>
             </div>
