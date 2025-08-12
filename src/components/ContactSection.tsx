@@ -130,7 +130,7 @@ const ContactSection = () => {
                       type="tel"
                       value={formData.telefone}
                       onChange={handleInputChange}
-                      placeholder="(11) 99999-9999"
+                      placeholder="(13) 98194-5485"
                       required
                       className="h-12"
                     />
@@ -223,7 +223,7 @@ const ContactSection = () => {
                   <Button variant="outline" className="w-full h-12" asChild>
                     <a
                       href={
-                        `https://wa.me/5511999999999?text=${encodeURIComponent(
+                        `https://wa.me/5513981945485?text=${encodeURIComponent(
                           `Olá! Sou ${formData.nome || 'Cliente'} e gostaria de conversar sobre: ${
                             formData.objetivos.length ? formData.objetivos.join(', ') : 'meu projeto'
                           }. Orçamento: ${formData.orcamento || 'a definir'}.`
@@ -256,7 +256,7 @@ const ContactSection = () => {
             {/* Contact Methods */}
             <div className="space-y-4">
               <a 
-                href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da AllSolutions"
+                href="https://wa.me/5513981945485?text=Olá! Gostaria de saber mais sobre os serviços da AllSolutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
@@ -264,7 +264,7 @@ const ContactSection = () => {
                 <MessageCircle className="w-6 h-6 text-growth-green-600" />
                 <div>
                   <div className="font-semibold text-gray-900">WhatsApp</div>
-                  <div className="text-gray-600">(11) 99999-9999</div>
+                  <div className="text-gray-600">+55 13 98194-5485</div>
                 </div>
               </a>
 
