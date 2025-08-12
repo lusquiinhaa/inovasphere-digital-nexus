@@ -47,6 +47,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand tokens */
+    --brand-primary: 221 83% 53%; /* #2563EB */
+    --brand-secondary: 262 83% 58%; /* #7C3AED */
+    --brand-hero-start: 210 40% 96%;
+    --brand-hero-end: 262 83% 98%;
   }
 
   .dark {
@@ -104,15 +110,15 @@ All colors MUST be HSL.
 
 @layer utilities {
   .bg-gradient-tech {
-    background: linear-gradient(135deg, #2A5B8C 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
   }
   
   .bg-gradient-hero {
-    background: linear-gradient(135deg, #e6f2ff 0%, #e8f5e8 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-primary) / 0.08) 0%, hsl(var(--brand-secondary) / 0.08) 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #2A5B8C 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -26,10 +26,10 @@ const DifferentialsSection = () => {
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-gray-900">
-            Por Que Somos <span className="text-gradient">Diferentes?</span>
+            Por que <span className="text-gradient">funcionamos</span> bem?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nossa abordagem única combina tecnologia de ponta com estratégia de negócios
+            Unimos tecnologia e método para resolver problemas reais com clareza e foco.
           </p>
         </div>
 

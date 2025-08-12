@@ -10,33 +10,33 @@ const DemoSection = () => {
   const demos = [
     {
       id: 'website',
-      title: 'E-commerce Revolucionário',
+      title: 'E-commerce moderno',
       category: 'Website',
       icon: Monitor,
       preview: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Loja virtual com IA integrada para recomendações personalizadas',
-      metrics: { conversion: '+187%', speed: '0.8s', sales: '+€2.3M' },
-      tech: ['React', 'AI/ML', 'Stripe', 'PWA']
+      description: 'Loja virtual rápida e acessível com checkout simples e PWA.',
+      metrics: { desempenho: 'Rápido', ux: 'Intuitivo', seo: 'Boas práticas' },
+      tech: ['React', 'Stripe', 'PWA']
     },
     {
       id: 'app',
-      title: 'FinTech do Futuro',
+      title: 'App financeiro',
       category: 'App Mobile',
       icon: Smartphone,
       preview: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'App financeiro com blockchain e análise preditiva',
-      metrics: { users: '50K+', rating: '4.9★', downloads: '1M+' },
-      tech: ['React Native', 'Blockchain', 'AI', 'Biometrics']
+      description: 'Gestão simples do dia a dia com segurança e autenticação.',
+      metrics: { desempenho: 'Leve', ux: 'Clara', confiabilidade: 'Estável' },
+      tech: ['React Native', 'Auth', 'Biometria']
     },
     {
       id: 'platform',
-      title: 'SaaS Inteligente',
+      title: 'SaaS de analytics',
       category: 'Plataforma',
       icon: Globe,
       preview: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Dashboard analytics com automação e insights em tempo real',
-      metrics: { efficiency: '+340%', clients: '200+', automation: '95%' },
-      tech: ['Next.js', 'GraphQL', 'Python', 'Docker']
+      description: 'Dashboards e automações para operação mais previsível.',
+      metrics: { monitoramento: 'Tempo real', ux: 'Clara', escalabilidade: 'Pronto para crescer' },
+      tech: ['Next.js', 'GraphQL', 'Docker']
     }
   ];
 
@@ -56,16 +56,16 @@ const DemoSection = () => {
           <div className="flex items-center justify-center space-x-2 text-purple-400">
             <Sparkles size={24} className="animate-pulse" />
             <span className="text-sm font-semibold uppercase tracking-wider">
-              Demonstrativos Interativos
+              Projetos e Demos
             </span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold font-montserrat text-white leading-tight">
-            Veja a <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Magia</span> Acontecer
+            Conheça nossos <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">projetos</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Projetos reais que transformaram negócios. Explore nossos casos de sucesso interativamente.
+            Exemplos práticos de sites, apps e automações — objetivos claros, entregas consistentes.
           </p>
         </div>
 
@@ -174,18 +174,17 @@ const DemoSection = () => {
           <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30 max-w-2xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Quer Algo Ainda Mais Impressionante?
+                Quer um projeto sob medida?
               </h3>
               <p className="text-gray-300 mb-6">
-                Estes são apenas alguns exemplos. Criamos soluções únicas para cada cliente.
+                Conte sua necessidade e criamos a solução certa para o momento do seu negócio.
               </p>
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Criar Meu Projeto Único
-                <Sparkles className="ml-2 w-5 h-5" />
+                Solicitar orçamento
               </Button>
             </CardContent>
           </Card>

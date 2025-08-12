@@ -85,7 +85,7 @@ const Header = () => {
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Dominar Mercado
+              Solicitar orçamento
             </Button>
           </div>
 
@@ -142,7 +142,7 @@ const Header = () => {
                   document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Dominar Mercado
+                Solicitar orçamento
               </Button>
             </nav>
           </div>
