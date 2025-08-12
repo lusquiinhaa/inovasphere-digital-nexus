@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 px-4 py-2 rounded-full">
                   <Zap size={16} className="text-purple-600 animate-pulse" />
                   <span className="text-sm font-bold text-purple-700 uppercase tracking-wide">
-                    Revolução Digital em Curso
+                    Estratégia e execução
                   </span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
               <div className="relative">
                 <img
                   src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Interface revolucionária - Dashboard analytics com IA"
+                    alt="Interface de dashboard analytics"
                   className="rounded-3xl shadow-2xl w-full animate-float transform hover:scale-105 transition-transform duration-500"
                 />
                 
@@ -79,16 +79,6 @@ const HeroSection = () => {
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl p-3 shadow-xl animate-float" style={{animationDelay: '2s'}}>
-                  <div className="text-white text-sm font-bold">100% Sucesso</div>
-                </div>
-                
-                <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-xl animate-float" style={{animationDelay: '0.5s'}}>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">5.0★</div>
-                    <div className="text-xs text-gray-500">Rating</div>
-                  </div>
-                </div>
               </div>
             </div>
             

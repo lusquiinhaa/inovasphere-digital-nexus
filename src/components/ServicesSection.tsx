@@ -8,13 +8,13 @@ const ServicesSection = () => {
     {
       icon: Monitor,
       title: 'Sites & Apps Web',
-      subtitle: 'Plataformas que dominam mercados.',
-      description: 'Sites responsivos e aplicações web PWA que transformam visitantes em clientes fanáticos. Cada pixel é estrategicamente posicionado para conversões máximas.',
+      subtitle: 'Plataformas focadas em resultado.',
+      description: 'Sites responsivos e aplicações web PWA que transformam visitantes em clientes, com foco em clareza e desempenho.',
       features: [
         'Websites responsivos',
         'Progressive Web Apps',
-        'SEO que domina Google',
-        'Performance sub-1 segundo'
+        'SEO técnico e conteúdo',
+        'Performance otimizada'
       ],
       color: 'from-blue-600 to-purple-600',
       bgColor: 'from-blue-50 to-purple-50',
@@ -23,23 +23,23 @@ const ServicesSection = () => {
     {
       icon: Smartphone,
       title: 'Apps Mobile & Desktop',
-      subtitle: 'Soluções multiplataforma que conquistam.',
-      description: 'Apps Android/iOS nativos e software Windows personalizados. Experiências premium que geram engajamento extremo e fidelização total dos usuários.',
+      subtitle: 'Soluções multiplataforma para o seu contexto.',
+      description: 'Apps Android/iOS nativos e software Windows personalizados. Experiências consistentes que priorizam usabilidade e estabilidade.',
       features: [
         'Android/iOS nativo',
         'Software Windows',
         'Apps cross-platform',
-        'Interface intuitiva premium'
+        'Interface intuitiva'
       ],
       color: 'from-green-600 to-blue-600',
       bgColor: 'from-green-50 to-blue-50',
-      results: 'Experiência premium'
+      results: 'Experiência consistente'
     },
     {
       icon: Rocket,
       title: 'Mentoria & Consultoria',
-      subtitle: 'Estratégias que multiplicam resultados.',
-      description: 'Consultoria estratégica e mentoria executiva 1:1 que já escalou +200 negócios. Metodologia proprietária que acelera crescimento e maximiza ROI.',
+      subtitle: 'Estratégias práticas para evoluir com segurança.',
+      description: 'Consultoria estratégica e mentoria 1:1 para desenhar um roadmap claro e priorizar o que importa.',
       features: [
         'Consultoria técnica especializada',
         'Mentoria executiva 1:1',
@@ -48,7 +48,7 @@ const ServicesSection = () => {
       ],
       color: 'from-purple-600 to-pink-600',
       bgColor: 'from-purple-50 to-pink-50',
-      results: 'Crescimento acelerado'
+      results: 'Crescimento sustentável'
     }
   ];
 
@@ -60,7 +60,7 @@ const ServicesSection = () => {
           <div className="flex items-center justify-center space-x-2 text-purple-600">
             <Target size={20} />
             <span className="text-sm font-semibold uppercase tracking-wider">
-              Arsenal Completo
+              Serviços
             </span>
           </div>
           
@@ -129,7 +129,7 @@ const ServicesSection = () => {
                   className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white group-hover:scale-105 transition-transform duration-300`}
                   onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Revolucionar Agora
+                  Solicitar orçamento
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </CardContent>
@@ -142,7 +142,7 @@ const ServicesSection = () => {
           <Card className="bg-gradient-to-r from-purple-600 to-blue-600 border-0 max-w-3xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-3xl font-bold text-white mb-4">
-                Pronto para Revolucionar seu Negócio?
+                Pronto para iniciar seu projeto?
               </h3>
               <p className="text-purple-100 mb-6 text-lg">
                 Vamos trabalhar juntos para transformar sua visão em realidade digital. 
