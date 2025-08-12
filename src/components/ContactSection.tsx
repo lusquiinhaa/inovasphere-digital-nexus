@@ -4,9 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Send, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '@/lib/supabase';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -135,6 +137,56 @@ const ContactSection = () => {
                   </div>
 
                   <div>
+                    <label htmlFor="empresa" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Empresa (opcional)
+                    </label>
+                    <Input
+                      id="empresa"
+                      name="empresa"
+                      type="text"
+                      value={formData.empresa}
+                      onChange={handleInputChange}
+                      placeholder="Nome da empresa"
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="block text-sm font-semibold text-gray-700 mb-2">Objetivo do projeto</div>
+                    <div className="grid sm:grid-cols-2 gap-2">
+                      {['Site/LP','App Web/PWA','App Android/iOS','Software Windows','Mentoria/Consultoria','Automação/Integrações'].map((opt) => (
+                        <label key={opt} className="flex items-center gap-2 text-sm text-gray-700">
+                          <input
+                            type="checkbox"
+                            checked={formData.objetivos.includes(opt)}
+                            onChange={() =>
+                              setFormData(prev => ({
+                                ...prev,
+                                objetivos: prev.objetivos.includes(opt)
+                                  ? prev.objetivos.filter(o => o !== opt)
+                                  : [...prev.objetivos, opt]
+                              }))
+                            }
+                          />
+                          {opt}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="block text-sm font-semibold text-gray-700 mb-2">Orçamento (faixa)</div>
+                    <RadioGroup value={formData.orcamento} onValueChange={(v) => setFormData(prev => ({...prev, orcamento: v}))}>
+                      {['Até R$ 5 mil','R$ 5–15 mil','R$ 15–50 mil','Acima de R$ 50 mil','A definir'].map((opt, idx) => (
+                        <div key={opt} className="flex items-center space-x-2 py-1">
+                          <RadioGroupItem id={`orc-${idx}`} value={opt} />
+                          <Label htmlFor={`orc-${idx}`}>{opt}</Label>
+                        </div>
+                      ))}
+                    </RadioGroup>
+                  </div>
+
+                  <div>
                     <label htmlFor="mensagem" className="block text-sm font-semibold text-gray-700 mb-2">
                       Mensagem
                     </label>
@@ -150,23 +202,41 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full h-12 bg-gradient-tech text-white hover:opacity-90 transition-all duration-200 text-lg font-semibold disabled:opacity-50"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="mr-2" size={20} />
-                      Quero Inovar
-                    </>
-                  )}
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full h-12 bg-gradient-tech text-white hover:opacity-90 transition-all duration-200 text-lg font-semibold disabled:opacity-50"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2" size={20} />
+                        Solicitar orçamento
+                      </>
+                    )}
+                  </Button>
+                  <Button variant="outline" className="w-full h-12" asChild>
+                    <a
+                      href={
+                        `https://wa.me/5511999999999?text=${encodeURIComponent(
+                          `Olá! Sou ${formData.nome || 'Cliente'} e gostaria de conversar sobre: ${
+                            formData.objetivos.length ? formData.objetivos.join(', ') : 'meu projeto'
+                          }. Orçamento: ${formData.orcamento || 'a definir'}.`
+                        )}`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Falar no WhatsApp
+                      <MessageCircle className="ml-2 w-4 h-4" />
+                    </a>
+                  </Button>
+                </div>
               </form>
             </CardContent>
           </Card>

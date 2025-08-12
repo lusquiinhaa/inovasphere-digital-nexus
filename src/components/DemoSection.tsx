@@ -109,6 +109,7 @@ const DemoSection = () => {
                     src={currentDemo.preview}
                     alt={currentDemo.title}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   

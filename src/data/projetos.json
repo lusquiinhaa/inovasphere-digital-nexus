@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "hamburgueria-estoque",
+    "titulo": "App de Estoque para Hamburgueria",
+    "setor": "Food Service",
+    "thumb": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Controle manual gerava rupturas e custos.",
+    "solucao": "Plataforma web com alertas, inventário e relatórios.",
+    "resultados": ["Menos rupturas", "Acurácia maior"],
+    "stack": ["React", "C#", "SQL", "Power BI"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  },
+  {
+    "slug": "clinica-agendamento",
+    "titulo": "Sistema de Agendamento de Clínica",
+    "setor": "Saúde",
+    "thumb": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Filas e conflitos de horários.",
+    "solucao": "Agenda inteligente com confirmação por WhatsApp.",
+    "resultados": ["Menos faltas", "Fluxo mais previsível"],
+    "stack": ["React", "Supabase", "Twilio"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  },
+  {
+    "slug": "logistica-rota",
+    "titulo": "Otimização de Rotas Logísticas",
+    "setor": "Logística",
+    "thumb": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Custos altos e atrasos frequentes.",
+    "solucao": "Algoritmo de rotas com restrições e dashboards.",
+    "resultados": ["Mais previsibilidade"],
+    "stack": ["React", ".NET", "SQL"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  },
+  {
+    "slug": "ecommerce-minimal",
+    "titulo": "Loja Minimalista com PWA",
+    "setor": "Varejo",
+    "thumb": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Experiência lenta em mobile.",
+    "solucao": "PWA com checkout simplificado.",
+    "resultados": ["Navegação fluida"],
+    "stack": ["React", "Stripe", "PWA"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  },
+  {
+    "slug": "industria-iot",
+    "titulo": "Painel IoT para Indústria",
+    "setor": "Indústria",
+    "thumb": "https://images.unsplash.com/photo-1581091870622-7c61e67aae31?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Dados dispersos e sem alertas.",
+    "solucao": "Dashboard com telemetria e alarmes.",
+    "resultados": ["Monitoramento contínuo"],
+    "stack": ["React", "MQTT", "Docker"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  },
+  {
+    "slug": "financas-educacao",
+    "titulo": "App de Educação Financeira",
+    "setor": "Educação",
+    "thumb": "https://images.unsplash.com/photo-1580894894513-cbb3236ccd07?q=80&w=1200&auto=format&fit=crop",
+    "desafio": "Baixa retenção de alunos.",
+    "solucao": "Gamificação e trilhas de aprendizado.",
+    "resultados": ["Engajamento constante"],
+    "stack": ["React Native", "Expo"],
+    "links": { "demo": "#", "repo": null, "case": null }
+  }
+]

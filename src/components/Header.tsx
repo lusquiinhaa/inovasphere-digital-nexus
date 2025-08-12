@@ -69,6 +69,10 @@ const Header = () => {
               Projetos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link to="/sobre" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+              Sobre
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <Link to="/contato" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
               Contato
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -116,6 +120,13 @@ const Header = () => {
                 className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
               >
                 Projetos
+              </Link>
+              <Link 
+                to="/sobre" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+              >
+                Sobre
               </Link>
               <Link 
                 to="/contato" 
