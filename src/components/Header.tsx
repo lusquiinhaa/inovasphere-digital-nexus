@@ -35,21 +35,21 @@ const Header = () => {
   return (
     <header className={`fixed top-0 w-full backdrop-blur-xl border-b z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/95 shadow-xl border-purple-200' 
-          : 'bg-white/90 shadow-lg border-purple-100'
+          ? 'bg-background/95 shadow-xl border-border' 
+          : 'bg-background/90 shadow-lg border-border/50'
       }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Sparkles className="text-white w-6 h-6" />
+            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
+              <Sparkles className="text-primary-foreground w-6 h-6" />
             </div>
             <div>
-            <span className="font-montserrat font-bold text-xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="font-montserrat font-bold text-xl text-gradient">
                 AllSolutions
               </span>
-              <div className="text-xs text-gray-500 font-medium">DIGITAL EMPIRE BUILDERS</div>
+              <div className="text-xs text-muted-foreground font-medium">DIGITAL EMPIRE BUILDERS</div>
             </div>
           </div>
 
@@ -59,30 +59,31 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleSmoothScroll(item.href)}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group"
+                className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
-            <Link to="/projetos" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+            <Link to="/projetos" className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group">
               Projetos
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/sobre" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+            <Link to="/sobre" className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group">
               Sobre
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/contato" className="text-gray-700 hover:text-purple-600 font-medium transition-all duration-200 hover:scale-105 relative group">
+            <Link to="/contato" className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group">
               Contato
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+              variant="cta"
+              className="shadow-xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Solicitar orçamento
@@ -100,7 +101,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-purple-100">
+          <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => (
                 <button
@@ -109,7 +110,7 @@ const Header = () => {
                     handleSmoothScroll(item.href);
                     setIsMenuOpen(false);
                   }}
-                  className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2 text-left"
+                  className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2 text-left"
                 >
                   {item.name}
                 </button>
@@ -117,26 +118,27 @@ const Header = () => {
               <Link 
                 to="/projetos" 
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2"
               >
                 Projetos
               </Link>
               <Link 
                 to="/sobre" 
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2"
               >
                 Sobre
               </Link>
               <Link 
                 to="/contato" 
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2"
               >
                 Contato
               </Link>
               <Button 
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white mt-4"
+                variant="cta"
+                className="mt-4"
                 onClick={() => {
                   setIsMenuOpen(false);
                   document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });

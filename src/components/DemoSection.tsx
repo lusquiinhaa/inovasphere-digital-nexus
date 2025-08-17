@@ -159,7 +159,7 @@ const DemoSection = () => {
                       <Code className="w-4 h-4 mr-2" />
                       Ver Código
                     </Button>
-                    <Button variant="outline" className="border-accent/30 text-primary-foreground hover:bg-accent/10">
+                    <Button variant="outline" className="border-accent/30 text-primary hover:bg-accent/10">
                       Solicitar Similar
                     </Button>
                   </div>
