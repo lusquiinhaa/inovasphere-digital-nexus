@@ -63,17 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'tech-blue': {
-					50: '#e6f2ff',
-					500: '#2A5B8C',
-					600: '#1e4973',
-					700: '#18395c'
-				},
-				'growth-green': {
-					50: '#e8f5e8',
-					500: '#4CAF50',
-					600: '#3d8b40',
-					700: '#2e7d32'
+				// Brand colors - Nova Paleta
+				brand: {
+					primary: 'hsl(var(--brand-primary))',    // Azul Profundo
+					secondary: 'hsl(var(--brand-secondary))', // Laranja Vibrante
+					neutral: 'hsl(var(--brand-neutral))',    // Cinza Claro
+					text: 'hsl(var(--brand-text))'          // Preto Suave
 				}
 			},
 			fontFamily: {
