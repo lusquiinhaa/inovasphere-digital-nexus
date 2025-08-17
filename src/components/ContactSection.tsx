@@ -69,15 +69,15 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 bg-white">
+    <section id="contato" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-foreground">
             Pronto para Transformar Sua Ideia em{' '}
             <span className="text-gradient">Realidade?</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Fale conosco e receba um diagnóstico gratuito!
           </p>
         </div>
@@ -89,7 +89,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="nome" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="nome" className="block text-sm font-semibold text-foreground mb-2">
                       Nome Completo
                     </label>
                     <Input
@@ -105,7 +105,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
                       E-mail
                     </label>
                     <Input
@@ -121,7 +121,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="telefone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="telefone" className="block text-sm font-semibold text-foreground mb-2">
                       Telefone/WhatsApp
                     </label>
                     <Input
@@ -137,7 +137,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="empresa" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="empresa" className="block text-sm font-semibold text-foreground mb-2">
                       Empresa (opcional)
                     </label>
                     <Input
@@ -152,10 +152,10 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <div className="block text-sm font-semibold text-gray-700 mb-2">Objetivo do projeto</div>
+                    <div className="block text-sm font-semibold text-foreground mb-2">Objetivo do projeto</div>
                     <div className="grid sm:grid-cols-2 gap-2">
                       {['Site/LP','App Web/PWA','App Android/iOS','Software Windows','Mentoria/Consultoria','Automação/Integrações'].map((opt) => (
-                        <label key={opt} className="flex items-center gap-2 text-sm text-gray-700">
+                        <label key={opt} className="flex items-center gap-2 text-sm text-foreground">
                           <input
                             type="checkbox"
                             checked={formData.objetivos.includes(opt)}
@@ -175,7 +175,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <div className="block text-sm font-semibold text-gray-700 mb-2">Orçamento (faixa)</div>
+                    <div className="block text-sm font-semibold text-foreground mb-2">Orçamento (faixa)</div>
                     <RadioGroup value={formData.orcamento} onValueChange={(v) => setFormData(prev => ({...prev, orcamento: v}))}>
                       {['Até R$ 5 mil','R$ 5–15 mil','R$ 15–50 mil','Acima de R$ 50 mil','A definir'].map((opt, idx) => (
                         <div key={opt} className="flex items-center space-x-2 py-1">
@@ -187,7 +187,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="mensagem" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="mensagem" className="block text-sm font-semibold text-foreground mb-2">
                       Mensagem
                     </label>
                     <Textarea
@@ -206,7 +206,9 @@ const ContactSection = () => {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full h-12 bg-gradient-tech text-white hover:opacity-90 transition-all duration-200 text-lg font-semibold disabled:opacity-50"
+                    variant="cta"
+                    size="lg"
+                    className="w-full"
                   >
                     {isSubmitting ? (
                       <>
@@ -220,7 +222,7 @@ const ContactSection = () => {
                       </>
                     )}
                   </Button>
-                  <Button variant="outline" className="w-full h-12" asChild>
+                  <Button variant="outline" size="lg" className="w-full" asChild>
                     <a
                       href={
                         `https://wa.me/5513981945485?text=${encodeURIComponent(
@@ -244,10 +246,10 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold font-montserrat text-gray-900">
+              <h3 className="text-2xl font-bold font-montserrat text-foreground">
                 Vamos Conversar!
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Estamos prontos para transformar sua visão em realidade digital. 
                 Entre em contato conosco e descubra como podemos acelerar seu crescimento.
               </p>
@@ -261,10 +263,10 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
-                <MessageCircle className="w-6 h-6 text-growth-green-600" />
+                <MessageCircle className="w-6 h-6 text-accent" />
                 <div>
-                  <div className="font-semibold text-gray-900">WhatsApp</div>
-                  <div className="text-gray-600">+55 13 98194-5485</div>
+                  <div className="font-semibold text-foreground">WhatsApp</div>
+                  <div className="text-muted-foreground">+55 13 98194-5485</div>
                 </div>
               </a>
 
@@ -272,32 +274,32 @@ const ContactSection = () => {
                 href="mailto:allsolutions2025@outlook.com.br?subject=Interesse nos serviços da AllSolutions"
                 className="flex items-center space-x-4 p-4 bg-gradient-hero rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
-                <Send className="w-6 h-6 text-tech-blue-600" />
+                <Send className="w-6 h-6 text-primary" />
                 <div>
-                  <div className="font-semibold text-gray-900">E-mail</div>
-                  <div className="text-gray-600">allsolutions2025@outlook.com.br</div>
+                  <div className="font-semibold text-foreground">E-mail</div>
+                  <div className="text-muted-foreground">allsolutions2025@outlook.com.br</div>
                 </div>
               </a>
             </div>
 
             {/* Benefits */}
-            <div className="bg-gradient-tech rounded-2xl p-6 text-white">
+            <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
               <h4 className="font-bold text-lg mb-4">Diagnóstico Gratuito Inclui:</h4>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="w-2 h-2 bg-accent rounded-full"></div>
                   <span>Análise completa do seu negócio</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="w-2 h-2 bg-accent rounded-full"></div>
                   <span>Identificação de oportunidades</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="w-2 h-2 bg-accent rounded-full"></div>
                   <span>Proposta personalizada</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="w-2 h-2 bg-accent rounded-full"></div>
                   <span>Roadmap de crescimento</span>
                 </li>
               </ul>

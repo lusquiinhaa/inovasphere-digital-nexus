@@ -43,28 +43,28 @@ const DemoSection = () => {
   const currentDemo = demos.find(demo => demo.id === activeDemo) || demos[0];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-primary relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center space-y-6 mb-16">
-          <div className="flex items-center justify-center space-x-2 text-purple-400">
+          <div className="flex items-center justify-center space-x-2 text-accent">
             <Sparkles size={24} className="animate-pulse" />
             <span className="text-sm font-semibold uppercase tracking-wider">
               Projetos e Demos
             </span>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-bold font-montserrat text-white leading-tight">
-            Conheça nossos <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">projetos</span>
+          <h2 className="text-5xl md:text-6xl font-bold font-montserrat text-primary-foreground leading-tight">
+            Conheça nossos <span className="text-gradient">projetos</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Exemplos práticos de sites, apps e automações — objetivos claros, entregas consistentes.
           </p>
         </div>
@@ -77,21 +77,21 @@ const DemoSection = () => {
                 key={demo.id}
                 className={`cursor-pointer transition-all duration-300 border-0 ${
                   activeDemo === demo.id 
-                    ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 shadow-2xl scale-105' 
-                    : 'bg-white/5 hover:bg-white/10'
+                    ? 'bg-accent/20 shadow-2xl scale-105' 
+                    : 'bg-card/10 hover:bg-card/20'
                 }`}
                 onClick={() => setActiveDemo(demo.id)}
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      activeDemo === demo.id ? 'bg-gradient-to-r from-purple-500 to-blue-500' : 'bg-gray-700'
+                      activeDemo === demo.id ? 'bg-accent' : 'bg-muted/50'
                     }`}>
-                      <demo.icon className="w-6 h-6 text-white" />
+                      <demo.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <div className="text-sm text-gray-400 uppercase tracking-wide">{demo.category}</div>
-                      <div className="text-white font-semibold">{demo.title}</div>
+                      <div className="text-sm text-primary-foreground/60 uppercase tracking-wide">{demo.category}</div>
+                      <div className="text-primary-foreground font-semibold">{demo.title}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -101,7 +101,7 @@ const DemoSection = () => {
 
           {/* Demo Preview */}
           <div className="lg:col-span-2">
-            <Card className="bg-white/5 border-0 overflow-hidden">
+            <Card className="bg-card/10 border-0 overflow-hidden">
               <CardContent className="p-0">
                 {/* Preview Image */}
                 <div className="relative group">
@@ -111,13 +111,13 @@ const DemoSection = () => {
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
                   
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/30">
-                      <Play className="w-5 h-5 text-white mr-2" />
-                      <span className="text-white">Ver Demo Live</span>
+                    <Button variant="cta" className="backdrop-blur-sm">
+                      <Play className="w-5 h-5 mr-2" />
+                      <span>Ver Demo Live</span>
                     </Button>
                   </div>
                 </div>
@@ -125,28 +125,28 @@ const DemoSection = () => {
                 {/* Demo Info */}
                 <div className="p-8 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{currentDemo.title}</h3>
-                    <p className="text-gray-300">{currentDemo.description}</p>
+                    <h3 className="text-2xl font-bold text-primary-foreground mb-2">{currentDemo.title}</h3>
+                    <p className="text-primary-foreground/80">{currentDemo.description}</p>
                   </div>
 
                   {/* Metrics */}
                   <div className="grid grid-cols-3 gap-4">
                     {Object.entries(currentDemo.metrics).map(([key, value]) => (
                       <div key={key} className="text-center">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        <div className="text-2xl font-bold text-accent">
                           {value}
                         </div>
-                        <div className="text-sm text-gray-400 capitalize">{key}</div>
+                        <div className="text-sm text-primary-foreground/60 capitalize">{key}</div>
                       </div>
                     ))}
                   </div>
 
                   {/* Tech Stack */}
                   <div>
-                    <div className="text-sm text-gray-400 mb-2">Stack Tecnológico:</div>
+                    <div className="text-sm text-primary-foreground/60 mb-2">Stack Tecnológico:</div>
                     <div className="flex flex-wrap gap-2">
                       {currentDemo.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-white/10 text-white text-sm rounded-full">
+                        <span key={tech} className="px-3 py-1 bg-accent/20 text-primary-foreground text-sm rounded-full">
                           {tech}
                         </span>
                       ))}
@@ -155,11 +155,11 @@ const DemoSection = () => {
 
                   {/* CTA */}
                   <div className="flex space-x-4">
-                    <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                    <Button variant="cta">
                       <Code className="w-4 h-4 mr-2" />
                       Ver Código
                     </Button>
-                    <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                    <Button variant="outline" className="border-accent/30 text-primary-foreground hover:bg-accent/10">
                       Solicitar Similar
                     </Button>
                   </div>
@@ -171,17 +171,17 @@ const DemoSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30 max-w-2xl mx-auto">
+          <Card className="bg-accent/20 border-accent/30 max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-primary-foreground mb-4">
                 Quer um projeto sob medida?
               </h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-primary-foreground/80 mb-6">
                 Conte sua necessidade e criamos a solução certa para o momento do seu negócio.
               </p>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                variant="cta"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Solicitar orçamento

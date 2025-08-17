@@ -9,90 +9,90 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Nova Paleta de Cores */
-    --background: 0 0% 100%; /* Branco */
-    --foreground: 0 0% 10%; /* Preto Suave */
+    /* Paleta AllSolutions - Cores Exatas */
+    --background: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --foreground: 0 0% 10%; /* Preto Suave #1A1A1A */
 
-    --card: 0 0% 100%; /* Branco */
-    --card-foreground: 0 0% 10%; /* Preto Suave */
+    --card: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --card-foreground: 0 0% 10%; /* Preto Suave #1A1A1A */
 
-    --popover: 0 0% 100%; /* Branco */
-    --popover-foreground: 0 0% 10%; /* Preto Suave */
+    --popover: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --popover-foreground: 0 0% 10%; /* Preto Suave #1A1A1A */
 
-    --primary: 207 100% 8%; /* Azul Profundo #0D1B2A */
-    --primary-foreground: 0 0% 100%; /* Branco */
+    --primary: 207 100% 11%; /* Azul Profundo #0D1B2A */
+    --primary-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --secondary: 0 0% 90%; /* Cinza Claro */
-    --secondary-foreground: 0 0% 10%; /* Preto Suave */
+    --secondary: 0 0% 90%; /* Cinza Claro #E5E5E5 */
+    --secondary-foreground: 0 0% 10%; /* Preto Suave #1A1A1A */
 
-    --muted: 0 0% 90%; /* Cinza Claro */
+    --muted: 0 0% 90%; /* Cinza Claro #E5E5E5 */
     --muted-foreground: 0 0% 45%; /* Cinza médio */
 
     --accent: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
-    --accent-foreground: 0 0% 100%; /* Branco */
+    --accent-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%; /* Cinza Claro */
+    --border: 0 0% 90%; /* Cinza Claro #E5E5E5 */
     --input: 0 0% 95%; /* Cinza mais claro */
-    --ring: 14 100% 60%; /* Laranja Vibrante */
+    --ring: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 207 100% 8%; /* Azul Profundo */
-    --sidebar-foreground: 0 0% 100%; /* Branco */
-    --sidebar-primary: 14 100% 60%; /* Laranja Vibrante */
-    --sidebar-primary-foreground: 0 0% 100%; /* Branco */
-    --sidebar-accent: 0 0% 90%; /* Cinza Claro */
-    --sidebar-accent-foreground: 0 0% 10%; /* Preto Suave */
+    --sidebar-background: 207 100% 11%; /* Azul Profundo #0D1B2A */
+    --sidebar-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --sidebar-primary: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
+    --sidebar-primary-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --sidebar-accent: 0 0% 90%; /* Cinza Claro #E5E5E5 */
+    --sidebar-accent-foreground: 0 0% 10%; /* Preto Suave #1A1A1A */
     --sidebar-border: 0 0% 85%; /* Cinza */
-    --sidebar-ring: 14 100% 60%; /* Laranja Vibrante */
+    --sidebar-ring: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
 
-    /* Brand tokens - Nova Paleta */
-    --brand-primary: 207 100% 8%; /* Azul Profundo #0D1B2A */
+    /* Brand tokens - Paleta AllSolutions */
+    --brand-primary: 207 100% 11%; /* Azul Profundo #0D1B2A */
     --brand-secondary: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
     --brand-neutral: 0 0% 90%; /* Cinza Claro #E5E5E5 */
     --brand-text: 0 0% 10%; /* Preto Suave #1A1A1A */
   }
 
   .dark {
-    --background: 207 100% 8%; /* Azul Profundo */
-    --foreground: 0 0% 100%; /* Branco */
+    --background: 207 100% 11%; /* Azul Profundo #0D1B2A */
+    --foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --card: 207 90% 12%; /* Azul Profundo mais claro */
-    --card-foreground: 0 0% 100%; /* Branco */
+    --card: 207 90% 15%; /* Azul Profundo mais claro */
+    --card-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --popover: 207 90% 12%; /* Azul Profundo mais claro */
-    --popover-foreground: 0 0% 100%; /* Branco */
+    --popover: 207 90% 15%; /* Azul Profundo mais claro */
+    --popover-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --primary: 14 100% 60%; /* Laranja Vibrante */
-    --primary-foreground: 0 0% 100%; /* Branco */
+    --primary: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
+    --primary-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --secondary: 207 50% 20%; /* Azul escuro secundário */
-    --secondary-foreground: 0 0% 100%; /* Branco */
+    --secondary: 207 50% 25%; /* Azul escuro secundário */
+    --secondary-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
-    --muted: 207 30% 25%; /* Azul acinzentado */
+    --muted: 207 30% 30%; /* Azul acinzentado */
     --muted-foreground: 0 0% 70%; /* Cinza claro */
 
-    --accent: 14 100% 60%; /* Laranja Vibrante */
-    --accent-foreground: 0 0% 100%; /* Branco */
+    --accent: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
+    --accent-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 207 30% 25%; /* Azul acinzentado */
-    --input: 207 30% 30%; /* Azul input */
-    --ring: 14 100% 60%; /* Laranja Vibrante */
+    --border: 207 30% 30%; /* Azul acinzentado */
+    --input: 207 30% 35%; /* Azul input */
+    --ring: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
     
-    --sidebar-background: 207 100% 8%; /* Azul Profundo */
-    --sidebar-foreground: 0 0% 100%; /* Branco */
-    --sidebar-primary: 14 100% 60%; /* Laranja Vibrante */
-    --sidebar-primary-foreground: 0 0% 100%; /* Branco */
-    --sidebar-accent: 207 50% 20%; /* Azul escuro secundário */
-    --sidebar-accent-foreground: 0 0% 100%; /* Branco */
-    --sidebar-border: 207 30% 25%; /* Azul acinzentado */
-    --sidebar-ring: 14 100% 60%; /* Laranja Vibrante */
+    --sidebar-background: 207 100% 11%; /* Azul Profundo #0D1B2A */
+    --sidebar-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --sidebar-primary: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
+    --sidebar-primary-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --sidebar-accent: 207 50% 25%; /* Azul escuro secundário */
+    --sidebar-accent-foreground: 0 0% 100%; /* Branco Puro #FFFFFF */
+    --sidebar-border: 207 30% 30%; /* Azul acinzentado */
+    --sidebar-ring: 14 100% 60%; /* Laranja Vibrante #FF6B35 */
   }
 }
 
