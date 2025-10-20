@@ -36,7 +36,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-                Da estratégia ao código: sites, apps e automações que geram resultado real.
+                Da estratégia ao código: sites, apps, automações e manutenção de notebooks que geram resultado real.
               </p>
             </div>
 

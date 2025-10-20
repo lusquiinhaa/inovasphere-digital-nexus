@@ -1,9 +1,11 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Monitor, Smartphone, Rocket, ArrowRight, Zap, Target } from 'lucide-react';
+import { Monitor, Smartphone, Rocket, ArrowRight, Zap, Target, Wrench } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: Monitor,
@@ -16,9 +18,8 @@ const ServicesSection = () => {
         'SEO técnico e conteúdo',
         'Performance otimizada'
       ],
-      color: 'from-blue-600 to-purple-600',
-      bgColor: 'from-blue-50 to-purple-50',
-      results: 'Performance otimizada'
+      results: 'Performance otimizada',
+      link: '/projetos'
     },
     {
       icon: Smartphone,
@@ -31,9 +32,8 @@ const ServicesSection = () => {
         'Apps cross-platform',
         'Interface intuitiva'
       ],
-      color: 'from-green-600 to-blue-600',
-      bgColor: 'from-green-50 to-blue-50',
-      results: 'Experiência consistente'
+      results: 'Experiência consistente',
+      link: '/projetos'
     },
     {
       icon: Rocket,
@@ -46,9 +46,8 @@ const ServicesSection = () => {
         'Estratégia digital personalizada',
         'Roadmap de crescimento'
       ],
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-50 to-pink-50',
-      results: 'Crescimento sustentável'
+      results: 'Crescimento sustentável',
+      link: '/contato'
     }
   ];
 
@@ -74,8 +73,58 @@ const ServicesSection = () => {
           </p>
         </div>
 
+        {/* Maintenance Card */}
+        <Card className="col-span-full bg-secondary border-0 shadow-lg mb-8">
+          <CardContent className="p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
+                  <Wrench className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-3xl font-bold font-montserrat text-foreground">
+                  Manutenção de Notebooks
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Troca de SSD, formatação completa e reparo de tela preta. Diagnóstico profissional, peças de qualidade e garantia do serviço.
+                </p>
+                <Button 
+                  variant="cta"
+                  onClick={() => navigate('/manutencao')}
+                  className="mt-4"
+                >
+                  Ver serviços de manutenção
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Troca de SSD</span>
+                    <p className="text-sm text-muted-foreground">Upgrade de armazenamento</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Formatação Completa</span>
+                    <p className="text-sm text-muted-foreground">Sistema + drivers instalados</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <span className="text-foreground font-semibold">Tela Preta</span>
+                    <p className="text-sm text-muted-foreground">Diagnóstico e reparo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -128,7 +177,7 @@ const ServicesSection = () => {
                 <Button 
                   variant="cta"
                   className="w-full group-hover:scale-105 transition-transform duration-300"
-                  onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => service.link ? navigate(service.link) : document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Solicitar orçamento
                   <ArrowRight className="ml-2 w-4 h-4" />
