@@ -1,6 +1,9 @@
 import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import projects from "@/data/projetos.json";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -39,20 +42,25 @@ const ProjetoDetalhe = () => {
 
   if (!projeto) {
     return (
-      <main className="min-h-screen py-24 container mx-auto px-4">
+      <div className="min-h-screen bg-background">
         <SEO title="Projeto não encontrado | AllSolutions" description="O estudo de caso solicitado não foi encontrado." />
-        <div className="text-center space-y-6">
-          <h1 className="text-3xl font-bold">Projeto não encontrado</h1>
-          <Button asChild>
-            <Link to="/projetos"><ArrowLeft className="w-4 h-4 mr-2" /> Voltar para projetos</Link>
-          </Button>
-        </div>
-      </main>
+        <Header />
+        <main className="py-24 container mx-auto px-4">
+          <div className="text-center space-y-6">
+            <h1 className="text-3xl font-bold">Projeto não encontrado</h1>
+            <Button asChild>
+              <Link to="/projetos"><ArrowLeft className="w-4 h-4 mr-2" /> Voltar para projetos</Link>
+            </Button>
+          </div>
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
     );
   }
 
   return (
-    <main className="min-h-screen py-24 bg-white">
+    <div className="min-h-screen bg-background">
       <SEO
         title={`Projeto: ${projeto.titulo} | AllSolutions`}
         description={`${projeto.setor} — ${projeto.desafio}`}
@@ -61,8 +69,11 @@ const ProjetoDetalhe = () => {
       {jsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       )}
-
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Header />
+      <ScrollToTop />
+      
+      <main className="pt-24 pb-16 bg-white">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="mb-6">
           <Link to="/projetos" className="story-link inline-flex items-center text-sm text-gray-600">
             <ArrowLeft className="w-4 h-4 mr-2" /> Voltar
@@ -110,8 +121,10 @@ const ProjetoDetalhe = () => {
             </aside>
           </CardContent>
         </Card>
-      </section>
-    </main>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

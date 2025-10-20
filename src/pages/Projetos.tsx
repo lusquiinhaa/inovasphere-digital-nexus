@@ -1,5 +1,8 @@
 import { useMemo, useState } from "react";
 import SEO from "@/components/SEO";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -43,14 +46,17 @@ const Projetos = () => {
   }, [query, tag]);
 
   return (
-    <main className="min-h-screen py-24 bg-gradient-hero">
+    <div className="min-h-screen bg-background">
       <SEO
         title="Projetos | AllSolutions"
         description="Portfólio com estudos e demos: sites, apps e automações que resolvem problemas reais."
         canonical={window.location.origin + "/projetos"}
       />
-
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Header />
+      <ScrollToTop />
+      
+      <main className="pt-24 pb-16 bg-gradient-hero">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl font-bold font-montserrat">
             Projetos
@@ -143,8 +149,10 @@ const Projetos = () => {
             </Card>
           ))}
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

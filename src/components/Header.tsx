@@ -19,16 +19,20 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Arsenal', href: '#servicos' },
-    { name: 'Demonstrativos', href: '#demos' },
-    { name: 'Revolução', href: '#contato' },
+    { name: 'Home', href: '/', isRoute: true },
+    { name: 'Arsenal', href: '/arsenal', isRoute: true },
+    { name: 'Demonstrativos', href: '/demonstrativo', isRoute: true },
+    { name: 'Revolução', href: '/revolucao', isRoute: true },
   ];
 
-  const handleSmoothScroll = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string, isRoute?: boolean) => {
+    if (isRoute) {
+      window.location.href = href;
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -58,7 +62,7 @@ const Header = () => {
             {menuItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => handleSmoothScroll(item.href)}
+                onClick={() => handleNavigation(item.href, item.isRoute)}
                 className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group"
               >
                 {item.name}
@@ -111,7 +115,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => {
-                    handleSmoothScroll(item.href);
+                    handleNavigation(item.href, item.isRoute);
                     setIsMenuOpen(false);
                   }}
                   className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2 text-left"
