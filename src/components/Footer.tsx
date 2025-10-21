@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4 text-growth-green-500" />
-                <span className="text-gray-400">+55 13 98194-5485</span>
+                <span className="text-gray-400">+55 13 98147-5924</span>
               </div>
             </div>
           </div>
