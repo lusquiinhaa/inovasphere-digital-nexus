@@ -85,6 +85,10 @@ const Header = () => {
               Manutenção
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link to="/faq" className="text-foreground hover:text-accent font-medium transition-all duration-200 hover:scale-105 relative group">
+              FAQ
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -150,6 +154,13 @@ const Header = () => {
                 className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2"
               >
                 Manutenção
+              </Link>
+              <Link 
+                to="/faq" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground hover:text-accent font-medium transition-colors duration-200 py-2"
+              >
+                FAQ
               </Link>
               <Button
                 variant="cta"
