@@ -1,8 +1,8 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Monitor, Smartphone, Rocket, ArrowRight, Zap, Target, Wrench } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import AnimatedSection, { AnimatedScale } from '@/components/AnimatedSection';
 
 const ServicesSection = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const ServicesSection = () => {
     <section id="servicos" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center space-y-6 mb-20">
+        <AnimatedSection className="text-center space-y-6 mb-20">
           <div className="flex items-center justify-center space-x-2 text-accent">
             <Target size={20} />
             <span className="text-sm font-semibold uppercase tracking-wider">
@@ -71,10 +71,10 @@ const ServicesSection = () => {
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             <strong>Sites, Apps Mobile, Software Desktop, Mentoria e Consultoria.</strong> Desenvolvemos soluções completas e personalizadas que <strong>fazem a diferença real</strong> no seu negócio.
           </p>
-        </div>
+        </AnimatedSection>
 
-        {/* Maintenance Card */}
-        <Card className="col-span-full bg-secondary border-0 shadow-lg mb-8">
+        <AnimatedSection delay={0.1}>
+          <Card className="col-span-full bg-secondary border-0 shadow-lg mb-8">
           <CardContent className="p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
@@ -121,13 +121,14 @@ const ServicesSection = () => {
               </div>
             </div>
           </CardContent>
-        </Card>
+          </Card>
+        </AnimatedSection>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <AnimatedScale key={index} delay={0.2 + index * 0.1}>
+              <Card
               className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 shadow-lg overflow-hidden relative"
             >
               {/* Background Gradient */}
@@ -184,11 +185,12 @@ const ServicesSection = () => {
                 </Button>
               </CardContent>
             </Card>
+          </AnimatedScale>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        <AnimatedSection delay={0.5} className="text-center">
           <Card className="bg-primary border-0 max-w-3xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-3xl font-bold text-primary-foreground mb-4">
@@ -208,7 +210,7 @@ const ServicesSection = () => {
               </Button>
             </CardContent>
           </Card>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
