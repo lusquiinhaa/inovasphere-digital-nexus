@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,7 +5,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Send, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { submitContactForm } from '@/lib/supabase';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 
@@ -20,7 +18,6 @@ const ContactSection = () => {
     orcamento: '',
     mensagem: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,41 +28,47 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    try {
-      const result = await submitContactForm(formData);
-      
-      if (result.success) {
-        toast({
-          title: "Mensagem enviada com sucesso!",
-          description: "Entraremos em contato em breve para seu diagnóstico gratuito.",
-        });
-
-        // Reset form
-        setFormData({
-          nome: '',
-          email: '',
-          telefone: '',
-          empresa: '',
-          objetivos: [],
-          orcamento: '',
-          mensagem: ''
-        });
-      } else {
-        throw new Error('Erro ao enviar mensagem');
-      }
-    } catch (error) {
+    // Validação básica
+    if (!formData.nome.trim() || !formData.email.trim() || !formData.mensagem.trim()) {
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Por favor, tente novamente ou entre em contato via WhatsApp.",
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha todos os campos obrigatórios.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
+      return;
     }
+
+    // Construir corpo do email
+    const objetivosText = formData.objetivos.length > 0 
+      ? formData.objetivos.join(', ') 
+      : 'Não especificado';
+    
+    const emailBody = `
+Nome: ${formData.nome.trim()}
+E-mail: ${formData.email.trim()}
+Telefone: ${formData.telefone.trim() || 'Não informado'}
+Empresa: ${formData.empresa.trim() || 'Não informada'}
+
+Objetivos do Projeto: ${objetivosText}
+Orçamento: ${formData.orcamento || 'A definir'}
+
+Mensagem:
+${formData.mensagem.trim()}
+    `.trim();
+
+    const mailtoLink = `mailto:allsolutions2025@outlook.com.br?subject=${encodeURIComponent(
+      `Solicitação de Orçamento - ${formData.nome.trim()}`
+    )}&body=${encodeURIComponent(emailBody)}`;
+
+    window.location.href = mailtoLink;
+
+    toast({
+      title: "Redirecionando para seu e-mail",
+      description: "Complete o envio no seu aplicativo de e-mail.",
+    });
   };
 
   return (
@@ -205,22 +208,12 @@ const ContactSection = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button 
                     type="submit" 
-                    disabled={isSubmitting}
                     variant="cta"
                     size="lg"
                     className="w-full"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Enviando...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2" size={20} />
-                        Solicitar orçamento
-                      </>
-                    )}
+                    <Send className="mr-2" size={20} />
+                    Solicitar orçamento
                   </Button>
                   <Button variant="outline" size="lg" className="w-full" asChild>
                     <a
