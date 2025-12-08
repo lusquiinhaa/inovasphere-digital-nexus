@@ -148,14 +148,16 @@ const Manutencao = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <a 
-                  href="tel:+5511999999999" 
+                  href="https://wa.me/5513981098220?text=Olá! Preciso de manutenção no meu notebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
-                  <span className="font-semibold">Ligar Agora</span>
+                  <span className="font-semibold">WhatsApp</span>
                 </a>
                 <a 
-                  href="mailto:contato@allsolutions.com.br" 
+                  href="mailto:allsolutions2025@outlook.com.br?subject=Solicitação de Manutenção de Notebook" 
                   className="flex items-center justify-center space-x-2 bg-white hover:bg-white/90 text-primary px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   <Mail className="w-5 h-5" />
